@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutternewclass/state_manage_test/screen/image_galery.dart';
+import 'package:flutternewclass/state_manage_test/screen/item_view.dart';
 import 'package:flutternewclass/state_manage_test/utilities/constants/controllers.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +25,7 @@ class MyFlutterApp extends StatelessWidget {
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: ImageGalery(),
+        home: ItemViewer(),
       ),
     );
   }

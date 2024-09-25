@@ -12,13 +12,14 @@ class CaroselSlider01 extends StatefulWidget {
 
 class _CaroselSlider01State extends State<CaroselSlider01> {
   final controller=PageController(viewportFraction: 0.8,keepPage: true);
+  final String imagePath="assets/images/";
   List<String> listimgages=[
-    "assets/images/Cappuccino.jpg",
-    "assets/images/Americano.jpeg",
-    "assets/images/Cappuccino.jpg",
-    "assets/images/Americano.jpeg",
-    "assets/images/Cappuccino.jpg",
-    "assets/images/Americano.jpeg",
+    "Cappuccino.jpg",
+    "Americano.jpeg",
+    "Cappuccino.jpg",
+    "Americano.jpeg",
+    "Cappuccino.jpg",
+    "Americano.jpeg",
 
   ];
   int _currentPage=0;
@@ -40,7 +41,7 @@ class _CaroselSlider01State extends State<CaroselSlider01> {
       //             return Container(
       //               margin: EdgeInsets.symmetric(horizontal: 10,vertical: 4),
       //               child: ClipRRect(borderRadius: BorderRadius.circular(16),
-      //                 child: Image.asset(listimgages[index],fit: BoxFit.cover,),),
+      //                 child: Image.asset(imagepath+listimgages[index],fit: BoxFit.cover,),),
       //             );
       //           }
       //           ),
@@ -108,14 +109,12 @@ class _CaroselSlider01State extends State<CaroselSlider01> {
           child: Column(
             children: [
               CarouselSlider(
-                items: listimgages.map((item)=>  Container(
-                  child: Center(
-                    child: Image.asset(item))
-                 ) ).toList(), 
+                items: listimgages.map((item)=>  Center(
+                  child: Image.asset(imagePath+item)) ).toList(), 
                 options: CarouselOptions(height: 200,
                   autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 300),
+                  autoPlayInterval: const Duration(seconds: 3),
+                  autoPlayAnimationDuration: const Duration(milliseconds: 300),
                   enlargeCenterPage: true,
                   onPageChanged: (index, reason) {
                     setState(() {
@@ -128,7 +127,7 @@ class _CaroselSlider01State extends State<CaroselSlider01> {
                   children: [
                     for(int i=0;i<listimgages.length;i++)
                     Container(
-                      margin: EdgeInsets.all(5),
+                      margin: const EdgeInsets.all(5),
                       height: 9,
                       width: i==_currentPage?40:9,
                       decoration: BoxDecoration(
