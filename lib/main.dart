@@ -1,4 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutternewclass/firebase_options.dart';
 import 'package:flutternewclass/state_manage_test/screen/item_view.dart';
 import 'package:flutternewclass/state_manage_test/utilities/constants/controllers.dart';
 import 'package:provider/provider.dart';
@@ -6,7 +8,11 @@ import 'package:provider/provider.dart';
 
 
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,); 
+  
   runApp(const MyFlutterApp());
 }
 
