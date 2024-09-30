@@ -25,15 +25,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -71,4 +65,23 @@ class DefaultFirebaseOptions {
     storageBucket: 'basic-app-a6436.appspot.com',
     iosBundleId: 'com.example.flutternewclass',
   );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCjOZa-L-UN2xcCkvITu0TLrI1Jp1AMrL8',
+    appId: '1:10961592997:ios:f148142423f2e166ce234c',
+    messagingSenderId: '10961592997',
+    projectId: 'basic-app-a6436',
+    storageBucket: 'basic-app-a6436.appspot.com',
+    iosBundleId: 'com.example.flutternewclass',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyAXUx80O2frtDSEpPRGUKRKtWMjvTF--O4',
+    appId: '1:10961592997:web:b0664ff75a6adcface234c',
+    messagingSenderId: '10961592997',
+    projectId: 'basic-app-a6436',
+    authDomain: 'basic-app-a6436.firebaseapp.com',
+    storageBucket: 'basic-app-a6436.appspot.com',
+  );
+
 }

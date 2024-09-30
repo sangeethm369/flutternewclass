@@ -1,10 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternewclass/firebase_options.dart';
+import 'package:flutternewclass/state_manage_test/model/post_model_method.dart';
 import 'package:flutternewclass/state_manage_test/screen/post_replays.dart';
 import 'package:flutternewclass/state_manage_test/utilities/controllers/count_controllers.dart';
 import 'package:flutternewclass/state_manage_test/utilities/controllers/image_controllers.dart';
-import 'package:flutternewclass/state_manage_test/utilities/controllers/post_controller.dart';
 import 'package:provider/provider.dart';
 
 
@@ -30,11 +30,11 @@ class MyFlutterApp extends StatelessWidget {
         ChangeNotifierProvider(create: (BuildContext context)=>CountController(),),
         ChangeNotifierProvider(create: (BuildContext context)=>ImagePickerController(),),
         ChangeNotifierProvider(create: (BuildContext context)=>MultyImagePicker(),),
-        ChangeNotifierProvider(create: (BuildContext context)=>PostController(),),
+        ChangeNotifierProvider(create: (BuildContext context)=>PostModelMethod(),),
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: PostReplays2(),
+        home: PostReplays(),
       ),
     );
   }
