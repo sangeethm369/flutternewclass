@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutternewclass/state_manage_test/screen/counter_app_page1.dart';
-import 'package:flutternewclass/state_manage_test/utilities/constants/controllers.dart';
+import 'package:flutternewclass/state_manage_test/utilities/controllers/count_controllers.dart';
+import 'package:flutternewclass/state_manage_test/utilities/controllers/image_controllers.dart';
 import 'package:provider/provider.dart';
 
 class CounterAppPage2 extends StatelessWidget {

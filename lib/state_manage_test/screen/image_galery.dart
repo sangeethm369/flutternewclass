@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutternewclass/state_manage_test/utilities/constants/controllers.dart';
+import 'package:flutternewclass/state_manage_test/utilities/controllers/image_controllers.dart';
 import 'package:provider/provider.dart';
 
 class ImageGalery extends StatelessWidget {

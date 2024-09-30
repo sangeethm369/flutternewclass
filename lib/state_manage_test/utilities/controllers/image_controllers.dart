@@ -1,19 +1,8 @@
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
-class CountController with ChangeNotifier {
-  int count=0;
-  increament(){
-    count++;
-    notifyListeners();
-  }
-  decrement(){
-    count--;
-    notifyListeners();
-  }
-}
 
 class ImagePickerController with ChangeNotifier {
   File? file;
